@@ -1,0 +1,77 @@
+
+spider started
+2019-09-30 08:58:22
+current threading<_MainThread(MainThread, started 14308)>
+---------------------
+spider started
+2019-09-30 09:10:17
+current threading<_MainThread(MainThread, started 7864)>
+---------------------
+spider started
+2019-09-30 09:10:56
+current threading<_MainThread(MainThread, started 4512)>
+---------------------
+spider started
+2019-09-30 09:13:02
+current threading<_MainThread(MainThread, started 15820)>
+---------------------
+spider started
+2019-09-30 09:39:41
+current threading<_MainThread(MainThread, started 15928)>
+---------------------
+spider started
+2019-09-30 09:53:37
+current threading<_MainThread(MainThread, started 14996)>
+---------------------
+spider started
+2019-09-30 09:57:37
+current threading<_MainThread(MainThread, started 1472)>
+---------------------
+spider started
+2019-10-01 14:23:57
+current threading<_MainThread(MainThread, started 10144)>
+---------------------
+spider started
+2019-10-01 14:27:39
+current threading<_MainThread(MainThread, started 1440)>
+---------------------
+spider started
+2019-10-01 14:42:10
+current threading<_MainThread(MainThread, started 7316)>
+---------------------
+spider started
+2019-10-01 15:05:51
+current threading<_MainThread(MainThread, started 13844)>
+---------------------
+spider started
+2019-10-01 23:45:23
+current threading<_MainThread(MainThread, started 15452)>
+---------------------
+spider started
+2019-10-01 23:59:59
+current threading<_MainThread(MainThread, started 1668)>
+---------------------
+spider started
+2019-10-02 10:01:31
+current threading<_MainThread(MainThread, started 4552)>
+---------------------
+spider started
+2019-10-04 11:11:15
+current threading<_MainThread(MainThread, started 18272)>
+---------------------
+spider started
+2019-10-04 11:11:18
+current threading<_MainThread(MainThread, started 16628)>
+---------------------
+spider started
+2019-10-04 11:41:58
+current threading<_MainThread(MainThread, started 3628)>
+---------------------
+spider started
+2019-10-06 10:31:24
+current threading<_MainThread(MainThread, started 4404)>
+---------------------
+spider started
+2019-10-06 10:32:54
+current threading<_MainThread(MainThread, started 12348)>
+---------------------
