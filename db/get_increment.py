@@ -1,11 +1,7 @@
 import mysql.connector
 import datetime, time
-remote_mysql_config = {
-    "host":"106.13.83.102", "port":"3306",
-    "user":"lcy1274560014", "password":"lcy568972!!!!!",
-    "database":"fans"
-}
-
+from config import remote_mysql_config
+import mysql.connector.pooling
 
 def get_time(flags):
     if flags == 'l8':
@@ -65,14 +61,15 @@ class get_change():
             one_data = cursor1.fetchall()
             try:
                 increase_fans = one_data[-1][1] - one_data[0][1]
-                cell = [one_data[0][0], one_data[0][1], increase_fans]
+                cell = [one_data[0][0], one_data[0][1], int(increase_fans)]
                 incre_list.append(cell)
 
             except:
-                cell = [content, '数据不足']
+                print(['one err'])
+                cell = [content, 0]
                 incre_list.append(cell)
         con1.close()
-        rank_result = sorted(incre_list, key=lambda s: s[2], reverse=self.reverse)
+        rank_result = sorted(incre_list, key=lambda s: s[-1], reverse=self.reverse)
         return rank_result
 
 
@@ -112,9 +109,9 @@ class get_change():
         return self.increment
 
 
-# if __name__ == "__main__":
-#     get_one = get_change('2019-10-06 22:00:00', '2019-10-07 08:00:00')
-#     all = get_one.run()
-#     uid = get_one.get_ranked_uid()
-#     print(all)
-#     print(uid)
+if __name__ == "__main__":
+    get_one = get_change('2019-10-05 16:00:00', '2019-10-06 00:00:00')
+    all = get_one.run()
+    uid = get_one.get_ranked_uid()
+    print(all)
+    print(len(uid))
