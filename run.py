@@ -39,26 +39,25 @@ def send_report_mail():
 
 
 if __name__ == '__main__':
-    analysis_create_days()
-    # scheduler2 = BackgroundScheduler() # 不阻塞线程 后台运行
-    # scheduler2.add_job(send_report_mail,'interval', hours=12, start_date='2019-09-09 00:00:00',
-    #                   end_date='2022-4-01 23:00:00') # 发送状态报告
-    # scheduler2.start()  # 非阻塞线程，先运行
-    #
-    # # 发送粉丝数分析报告
-    # scheduler3 = BackgroundScheduler()
-    # scheduler4 = BackgroundScheduler()
-    # scheduler3.add_job(analysis_create_days, 'interval', hours=24, start_date='2019-09-09 00:08:00',
-    #                    end_date='2022-4-01 23:00:00')
-    # scheduler4.add_job(analysis_create_hours, 'interval', hours=1, start_date='2019-09-09 00:08:00',
-    #                    end_date='2022-4-01 23:00:00')
-    # scheduler3.start()
-    # scheduler4.start()
-    #
-    # report_start_condition() # 汇报启动情况
-    # scheduler1 = BlockingScheduler()
-    # # 在 2019-09-09 00:00:00 ~ 2019-12-31 00:00:00 之间, 每隔5分钟执行一次 run_spider 方法
-    # scheduler1.add_job(run_spider, 'interval', minutes=5, start_date='2019-09-09 00:00:00',
-    #                   end_date='2020-4-01 23:00:00')
-    # scheduler1.start() # 阻塞线程，最后运行
+    scheduler2 = BackgroundScheduler() # 不阻塞线程 后台运行
+    scheduler2.add_job(send_report_mail,'interval', hours=12, start_date='2019-09-09 00:00:00',
+                      end_date='2022-4-01 23:00:00') # 发送状态报告
+    scheduler2.start()  # 非阻塞线程，先运行
+
+    # 发送粉丝数分析报告
+    scheduler3 = BackgroundScheduler()
+    scheduler4 = BackgroundScheduler()
+    scheduler3.add_job(analysis_create_days, 'interval', hours=24, start_date='2019-09-09 00:08:00',
+                       end_date='2022-4-01 23:00:00')
+    scheduler4.add_job(analysis_create_hours, 'interval', hours=1, start_date='2019-09-09 00:08:00',
+                       end_date='2022-4-01 23:00:00')
+    scheduler3.start()
+    scheduler4.start()
+
+    report_start_condition() # 汇报启动情况
+    scheduler1 = BlockingScheduler()
+    # 在 2019-09-09 00:00:00 ~ 2019-12-31 00:00:00 之间, 每隔5分钟执行一次 run_spider 方法
+    scheduler1.add_job(run_spider, 'interval', minutes=5, start_date='2019-09-09 00:00:00',
+                      end_date='2020-4-01 23:00:00')
+    scheduler1.start() # 阻塞线程，最后运行
 
