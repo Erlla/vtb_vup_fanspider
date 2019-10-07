@@ -109,9 +109,9 @@ class get_change():
         return self.increment
 
 
-if __name__ == "__main__":
-    get_one = get_change('2019-10-05 16:00:00', '2019-10-06 00:00:00')
-    all = get_one.run()
-    uid = get_one.get_ranked_uid()
-    print(all)
-    print(len(uid))
+# if __name__ == "__main__":
+#     get_one = get_change('2019-10-07 00:00:00', '2019-10-07 20:00:00')
+#     all = get_one.run()
+#     uid = get_one.get_ranked_uid()
+#     print(all)
+#     print(len(uid))
