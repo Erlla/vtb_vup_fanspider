@@ -113,10 +113,8 @@ class get_change():
 
 
 # if __name__ == "__main__":
-#     res = get_time(flags='h')
-#     print(res)
-#     # get_one = get_change(res[0], res[1])
-#     # all = get_one.run()
-#     # uid = get_one.get_ranked_uid()
-#     # print(all)
-#     # print(uid)
+#     get_one = get_change('2019-10-06 22:00:00', '2019-10-07 08:00:00')
+#     all = get_one.run()
+#     uid = get_one.get_ranked_uid()
+#     print(all)
+#     print(uid)
