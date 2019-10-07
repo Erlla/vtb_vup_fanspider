@@ -1,6 +1,6 @@
 import mysql.connector
 import datetime, time
-from config import remote_mysql_config
+from db.config import remote_mysql_config
 import mysql.connector.pooling
 
 def get_time(flags):
