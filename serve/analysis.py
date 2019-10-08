@@ -23,7 +23,7 @@ def draw_chart(x_data, y_data, title, page_title, series_name, floder_name, res)
     # bar.set_global_opts(xaxis_opts=AxisOpts(boundary_gap=['5%', '10%']), toolbox_opts=opts.ToolboxOpts())
     bar.reversal_axis()
     bar.set_series_opts(label_opts=opts.LabelOpts(position="right"))
-    bar.render("../chart/{0}/{1}.html".format(floder_name, title))
+    bar.render("serve/chart/{0}/{1}.html".format(floder_name, title))
 
 
 def analysis_create_days():
