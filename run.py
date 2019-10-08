@@ -49,7 +49,7 @@ if __name__ == '__main__':
     scheduler4 = BackgroundScheduler()
     scheduler3.add_job(analysis_create_days, 'interval', hours=24, start_date='2019-09-09 00:00:00',
                        end_date='2022-4-01 23:00:00')
-    scheduler4.add_job(analysis_create_hours, 'interval', hours=1, start_date='2019-09-09 00:08:00',
+    scheduler4.add_job(analysis_create_hours, 'interval', hours=1, start_date='2019-09-09 00:00:00',
                        end_date='2022-4-01 23:00:00')
     scheduler3.start()
     scheduler4.start()
