@@ -15,20 +15,20 @@ def get_time(flags):
     # 返回一天前的这个时刻整点
     if flags == 'd':
         cur_time = int(time.time())
-        hour_stamp = cur_time - (cur_time % 3600)  # 当前时间整点时间戳
+        hour_stamp = cur_time - (cur_time % 3600) + 60  # 当前时间整点时间戳
         now_time = datetime.datetime.fromtimestamp(hour_stamp)  # 当前时间整点datetime
-        last_hour = datetime.datetime.fromtimestamp(hour_stamp - 86400)  # 返回上一小时整点
+        last_hour = datetime.datetime.fromtimestamp(hour_stamp - 86460)  # 返回上一小时整点
         return [ str(last_hour), str(now_time)]
 
     # 返回上一个小时的整点
     if flags == 'h':
         cur_time = int(time.time())
-        hour_stamp = cur_time - (cur_time % 3600)  # 当前时间整点时间戳
+        hour_stamp = cur_time - (cur_time % 3600) + 60 # 当前时间整点时间戳
         now_time = datetime.datetime.fromtimestamp(hour_stamp)  # 当前时间整点datetime
-        last_hour = datetime.datetime.fromtimestamp(hour_stamp - 3600) # 返回上一小时整点
+        last_hour = datetime.datetime.fromtimestamp(hour_stamp - 3660) # 返回上一小时整点
         return [str(last_hour), str(now_time)]
-
-
+res = get_time('h')
+print(res)
 class get_change():
     """
     运行run后返回的list [名称，uid，粉丝数增长情况]
@@ -61,11 +61,15 @@ class get_change():
             one_data = cursor1.fetchall()
             try:
                 increase_fans = one_data[-1][1] - one_data[0][1]
+                print(1)
                 cell = [one_data[0][0], one_data[0][1], int(increase_fans)]
+                print(2)
                 incre_list.append(cell)
+                print(3)
 
             except:
                 print(['one err'])
+                print(content)
                 cell = [content, 0]
                 incre_list.append(cell)
         con1.close()
