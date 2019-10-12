@@ -27,8 +27,7 @@ def get_time(flags):
         now_time = datetime.datetime.fromtimestamp(hour_stamp)  # 当前时间整点datetime
         last_hour = datetime.datetime.fromtimestamp(hour_stamp - 3660) # 返回上一小时整点
         return [str(last_hour), str(now_time)]
-res = get_time('h')
-print(res)
+
 class get_change():
     """
     运行run后返回的list [名称，uid，粉丝数增长情况]
